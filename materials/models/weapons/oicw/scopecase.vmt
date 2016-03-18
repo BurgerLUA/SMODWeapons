@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "models/Weapons/oicw/scopecase"
+	"$bumpmap" "models/Weapons/oicw/scopecase_normal"
+	"$envmaptint" "[.4 .4 .4]"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+}

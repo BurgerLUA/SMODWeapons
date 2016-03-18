@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\svd\skin1"
+	"$model" 1
+ 	"$alphatest" 1
+}
