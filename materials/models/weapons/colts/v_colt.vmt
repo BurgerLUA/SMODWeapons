@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Weapons\colts\v_colt"
+	"$bumpmap" "models\Weapons\colts\v_colt_normal"
+
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[ .5 .5 .5 ]"	
+}

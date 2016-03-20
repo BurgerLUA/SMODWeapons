@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\misc\setubun/oni2"
+	"$alphatest"	"1"
+}

@@ -66,8 +66,8 @@ EW2stbl["name"] = "Weapon_Kar98.Clipin"
 sound.Add(EW2stbl)
 //SMOD M60-----------------------------------------------------------------
 local EW2stbl = {}
-EW2stbl["channel"] = "1"
-EW2stbl["level"] = "140"
+EW2stbl["channel"] = "3"
+EW2stbl["level"] = "75"
 EW2stbl["volume"] = "1.0"
 EW2stbl["CompatibilityAttenuation"] = "1"
 EW2stbl["pitch"] = "90,98"

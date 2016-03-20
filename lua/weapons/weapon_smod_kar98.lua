@@ -4,7 +4,7 @@ if CLIENT then
 end
 
 SWEP.Category				= "SMOD"
-SWEP.PrintName				= "KAR98"
+SWEP.PrintName				= "7.62MM KARABINER 98K"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 

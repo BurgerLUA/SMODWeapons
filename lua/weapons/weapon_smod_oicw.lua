@@ -4,7 +4,7 @@ if CLIENT then
 end
 
 SWEP.Category				= "SMOD"
-SWEP.PrintName				= "OICW"
+SWEP.PrintName				= "5.56MM OICW"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -49,6 +49,7 @@ SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= true
 SWEP.HasDownRecoil			= false
+SWEP.HasSpecialFire			= true
 
 SWEP.BurstOverride			= 3
 SWEP.BurstConeMul			= 1
@@ -64,3 +65,42 @@ SWEP.IronSightsPos 			= Vector(-3, 20, 0)
 SWEP.IronSightsAng 			= Vector(1.25, 1, 0)
 
 SWEP.DamageFalloff			= 4000
+
+function SWEP:SpecialFire()
+
+	if not self:CanPrimaryAttack() then	return end
+	if self:IsBusy() then return end
+	if self:GetNextPrimaryFire() > CurTime() then return end
+	
+	
+	--if not self:CanShoot() then return end
+	
+	if self:Clip1() < 10 then return end
+	self:TakePrimaryAmmo(10)
+	self.Owner:SetAnimation(PLAYER_ATTACK1)
+	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
+
+	if (IsFirstTimePredicted() or game.SinglePlayer()) then
+		if (CLIENT or game.SinglePlayer()) then 
+			self:AddRecoil() -- Predict
+		end
+
+		local Damage = self.Primary.Damage*10
+		local Shots = 1
+		local Cone = self:HandleCone(0)
+		local Source = self.Owner:GetShootPos()
+		local Direction = self.Owner:GetAimVector()
+		
+		if self.Owner:IsPlayer() then
+			Direction = (self.Owner:EyeAngles() + self.Owner:GetPunchAngle()):Forward()
+		end
+		
+		self:EmitGunSound("beta/fire1.wav")
+		
+		self:ShootBullet(Damage,Shots,Cone,Source,Direction,self.EnableTracer)
+		self:AddHeat(Damage,Shots)
+	end
+	
+	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay*10*2)
+	
+end
