@@ -19,7 +19,7 @@ SWEP.SlotPos				= 1
 
 SWEP.ViewModel 				= "models/weapons/v_mamehands.mdl"
 SWEP.WorldModel				= "models/weapons/w_mamehands.mdl"
-SWEP.ViewModelFlip 			= true
+SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "slam"
 SWEP.UseHands				= false
 
@@ -42,7 +42,7 @@ SWEP.Primary.Automatic 		= true
 
 SWEP.EnableTracers			= false
 
-SWEP.RecoilMul 				= -0.5
+SWEP.RecoilMul 				= -0.1
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 1
 SWEP.HeatMul				= 1
@@ -99,7 +99,7 @@ function SWEP:PrimaryAttack()
 
 						local Shoot = self.Owner:GetShootPos()
 						local Eye= self.Owner:EyeAngles()
-						local ShootEdit = Shoot + Eye:Up()*math.sin(Mul*i)*5 + Eye:Right()*math.cos(Mul*i)*2.5 + Eye:Right()*-3
+						local ShootEdit = Shoot + Eye:Up()*math.sin(Mul*i)*5 + Eye:Right()*math.cos(Mul*i)*2.5 + Eye:Right()*3
 
 						self:ShootBean(ShootEdit, Eye + Angle(0,math.Rand(-1,1),0) )
 						
@@ -131,7 +131,7 @@ function SWEP:ShootBean(ShootPos,ShootAng)
 	
 	local phys = ent:GetPhysicsObject();
 	if IsValid(phys) then
-		phys:ApplyForceCenter(ShootAng:Forward()*200 + self.Owner:GetVelocity())
+		phys:ApplyForceCenter(ShootAng:Forward()*400 + self.Owner:GetVelocity())
 	end
 	
 end

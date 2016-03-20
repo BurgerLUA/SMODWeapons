@@ -17,7 +17,7 @@ function ENT:Initialize()
 		self:SetMoveType(MOVETYPE_VPHYSICS)
 		self:SetSolid(SOLID_VPHYSICS)
 
-		SafeRemoveEntityDelayed(self,120)
+		SafeRemoveEntityDelayed(self,60)
 		
 	end
 end

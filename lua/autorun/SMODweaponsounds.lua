@@ -20,6 +20,39 @@ SMODstbl["sound"] = {"weapons/colts/clip.wav"}
 SMODstbl["name"] = "Weapon_Pistol2.Reload"
 
 sound.Add(SMODstbl)
+//SMOD M1 Garand-----------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = "1"
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/garand/garand_shoot.wav"}
+SMODstbl["name"] = "Weapon_Garand.Fire"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "1"
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/garand/garand_reload_clipding.wav"}
+SMODstbl["name"] = "Weapon_Garand.ClipDing"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "3"
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/garand/garand_reload_clipin.wav"}
+SMODstbl["name"] = "Weapon_Garand.Clipin"
+
+sound.Add(SMODstbl)
 //SMOD M3 Grease Gun-------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = "3"
@@ -84,6 +117,61 @@ SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "98,102"
 SMODstbl["sound"] = {"weapons/grease/tommy_reload_clipin.wav"}
 SMODstbl["name"] = "Weapon_Kar98.Clipin"
+
+sound.Add(SMODstbl)
+//SMOD M4A1----------------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = "1"
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1.4"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/m4a1/m4sil-1.wav"}
+SMODstbl["name"] = "Weapon_M4A1.Silenced"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "3"
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/m4a1/m4a1_clipout.wav"}
+SMODstbl["name"] = "Weapon_M4A1.Clipout"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "3"
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/m4a1/m4a1_clipin.wav"}
+SMODstbl["name"] = "Weapon_M4A1.Clipin"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "3"
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/m4a1/m4a1_boltpull.wav"}
+SMODstbl["name"] = "Weapon_M4A1.Boltpull"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = "3"
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/m4a1/m4a1_deploy.wav"}
+SMODstbl["name"] = "Weapon_M4A1.Deploy"
 
 sound.Add(SMODstbl)
 //SMOD M60-----------------------------------------------------------------
