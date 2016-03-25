@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_oicw", "ChatFont", "OICW", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/ak47")
+	killicon.Add( "weapon_smod_oicw", "vgui/killicons/smod_OICW", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_OICW")
 end
 
 SWEP.Category				= "SMOD"
@@ -97,7 +97,7 @@ function SWEP:SpecialFire()
 		
 		self:EmitGunSound("beta/fire1.wav")
 		
-		self:ShootBullet(Damage,Shots,Cone,Source,Direction,self.EnableTracer)
+		self:ShootBullet(Damage*0.5,Shots,Cone,Source,Direction,self.EnableTracer)
 		self:AddHeat(Damage,Shots)
 	end
 	

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Weapons\v_cz52\grip"
+	"$bumpmap" "models\weapons\v_cz52\grip_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+}
+

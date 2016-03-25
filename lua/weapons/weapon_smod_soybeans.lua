@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "ent_smod_beans", "ChatFont", " Soy Bean Allergy", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon = surface.GetTextureID("vgui/gfx/vgui/ump45")
+	killicon.Add( "ent_smod_beans", "vgui/killicons/smod_SoyBeans", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_SoyBeans")
 end
 
 SWEP.Category				= "SMOD"
@@ -87,7 +87,11 @@ function SWEP:PrimaryAttack()
 		
 			if self:IsValid() and self.Owner:IsValid() and self.Owner:Alive() then
 		
-				self:WeaponSound() -- Predict
+				if self:Ammo1() == 0 then
+					self:EmitGunSound("bill/POCKET SAND.wav")
+				else
+					self:WeaponSound()
+				end
 			
 				if SERVER then
 				

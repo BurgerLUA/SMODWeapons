@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_oicw", "ChatFont", "OICW", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/ak47")
+	killicon.Add( "weapon_smod_m4a1", "vgui/killicons/smod_m4a1", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_m4a1")
 end
 
 SWEP.Category				= "SMOD"
@@ -24,11 +24,11 @@ SWEP.HoldType				= "ar2"
 
 SWEP.Primary.Damage			= 35
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Sound			= Sound("Weapon_M4A1.Silenced")
+SWEP.Primary.Sound			= Sound("weapons/m4a1/m4sil-1.wav")
 SWEP.Primary.Cone			= 0.00125
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.SpareClip		= 90
-SWEP.Primary.Delay			= 1/7
+SWEP.Primary.Delay			= 1/10
 SWEP.Primary.Ammo			= "AirboatGun"
 SWEP.Primary.Automatic 		= false
 

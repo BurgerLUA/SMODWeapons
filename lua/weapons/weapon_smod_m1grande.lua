@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_m1grande", "ChatFont", "Grande Latte Macchiato", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/scout")
+	killicon.Add( "weapon_smod_m1grande", "vgui/killicons/smod_M1Garand", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_M1Garand")
 end
 
 SWEP.Category				= "SMOD"
@@ -32,13 +32,13 @@ if CLIENT then
 end
 
 
-SWEP.Primary.Damage			= 110
+SWEP.Primary.Damage			= 100
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_Garand.Fire")
 SWEP.Primary.Cone			= 0.00125
 SWEP.Primary.ClipSize		= 8
 SWEP.Primary.SpareClip		= 40
-SWEP.Primary.Delay			= 1.2
+SWEP.Primary.Delay			= 1.0
 SWEP.Primary.Ammo			= "smod_3006"
 SWEP.Primary.Automatic 		= false
 
@@ -53,7 +53,7 @@ SWEP.HasCrosshair 			= true
 SWEP.HasCSSZoom 			= false
 
 SWEP.HasPumpAction 			= false
-SWEP.HasBoltAction 			= true
+SWEP.HasBoltAction 			= false
 SWEP.HasBurstFire 			= false
 SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
@@ -64,7 +64,7 @@ SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= true
 SWEP.IronSightTime			= 0.25
-SWEP.IronSightsPos 			= Vector(-4.97, 5, 2.6)
+SWEP.IronSightsPos 			= Vector(-4.97, 5, 1)
 SWEP.IronSightsAng 			= Vector(0, 0.025, 0)
 
 SWEP.DamageFalloff			= 5000

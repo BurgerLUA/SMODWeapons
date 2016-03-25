@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_kar98", "ChatFont", "Kar98", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/scout")
+	killicon.Add( "weapon_smod_kar98", "vgui/killicons/smod_Karabiner98", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_Karabiner98")
 end
 
 SWEP.Category				= "SMOD"
@@ -50,6 +50,7 @@ SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= false
 SWEP.HasDownRecoil			= false
+SWEP.HasSpecialFire			= true
 
 SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
@@ -60,4 +61,18 @@ SWEP.IronSightsAng 			= Vector(0, 0, 0)
 
 SWEP.DamageFalloff			= 5000
 
-SWEP.DisableReloadUntilEmpty = true
+function SWEP:SpecialFire()
+
+	if not self:CanPrimaryAttack() then	return end
+	if self:IsBusy() then return end
+	if self:GetNextPrimaryFire() > CurTime() then return end
+	self.Owner:SetAnimation(PLAYER_ATTACK1)
+	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
+
+	if SERVER then
+		self:Swing(100)
+	end
+	
+	self:SetNextPrimaryFire(CurTime() + 1)
+	
+end

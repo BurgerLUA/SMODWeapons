@@ -1,6 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_m60", "ChatFont", "M60", Color( 255, 80, 0, 255 ) )
-	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/ak47")
+	killicon.Add( "weapon_smod_m60", "vgui/killicons/smod_M60", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_M60")
 end
 
 SWEP.Category				= "SMOD"

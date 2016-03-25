@@ -1,10 +1,10 @@
 if CLIENT then
-	killicon.Add( "weapon_smod_dualcolts", "vgui/killicons/smod_dualcolts", Color( 0, 128, 255, 255 ) )
-	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_dualcolts")
+	killicon.Add( "weapon_smod_cz52", "vgui/killicons/smod_cz52", Color( 0, 128, 255, 255 ) )
+	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_cz52")
 end
 
 SWEP.Category				= "SMOD"
-SWEP.PrintName				= ".45ACP COLT AKIMBO"
+SWEP.PrintName				= "7.62mm CZ 52"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Secondary"
 
@@ -18,28 +18,26 @@ SWEP.AdminOnly				= false
 SWEP.Slot					= 1
 SWEP.SlotPos				= 1
 
-SWEP.ViewModel 				= "models/weapons/v_colts.mdl"
-SWEP.WorldModel				= "models/weapons/w_colts.mdl"
+SWEP.ViewModel 				= "models/weapons/v_cz52.mdl"
+SWEP.WorldModel				= "models/weapons/w_cz52.mdl"
 SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "duel"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 50
+SWEP.Primary.Damage			= 35
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Sound			= Sound("weapons/colts/fire.wav")
-SWEP.Primary.Cone			= 0.01
-SWEP.Primary.ClipSize		= 14
-SWEP.Primary.SpareClip		= 14*4
-SWEP.Primary.Delay			= 1/7
+SWEP.Primary.Sound			= Sound("Weapon_CZ52.Single")
+SWEP.Primary.Cone			= 0.00125
+SWEP.Primary.ClipSize		= 7
+SWEP.Primary.SpareClip		= 7*4
+SWEP.Primary.Delay			= 1/10
 SWEP.Primary.Ammo			= "SniperPenetratedRound"
 SWEP.Primary.Automatic 		= false
-
-SWEP.EnableTracer			= false
 
 SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 0.1
 SWEP.VelConeMul				= 1
-SWEP.HeatMul				= 0.5
+SWEP.HeatMul				= 1
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 0.5
@@ -53,7 +51,7 @@ SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= true
 SWEP.HasDownRecoil			= false
-SWEP.HasDual				= true
+SWEP.HasDryFire				= true
 
 SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
