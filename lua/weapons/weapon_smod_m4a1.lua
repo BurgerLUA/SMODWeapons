@@ -52,7 +52,7 @@ SWEP.HasDownRecoil			= false
 
 SWEP.BurstOverride			= 3
 SWEP.BurstConeMul			= 1
-SWEP.BurstSpeedOverride 	= 1
+SWEP.BurstSpeedOverride 	= 1.5
 SWEP.BurstRecoilMul			= 0.5
 SWEP.BurstHeatMul			= 0.5
 

@@ -30,7 +30,7 @@ if CLIENT then
 end
 
 
-SWEP.Primary.Damage			= 15
+SWEP.Primary.Damage			= 10
 SWEP.Primary.NumShots		= 10
 SWEP.Primary.Sound			= Sound("weapons/iceaxe/iceaxe_swing1.wav")
 SWEP.Primary.Cone			= 0.1
