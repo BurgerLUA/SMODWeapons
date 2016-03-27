@@ -70,7 +70,7 @@ function SWEP:SpecialFire()
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 
 	if SERVER then
-		self:Swing(100)
+		self:Swing(self.Primary.Damage / 2)
 	end
 	
 	self:SetNextPrimaryFire(CurTime() + 1)
