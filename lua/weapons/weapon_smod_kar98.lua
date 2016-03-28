@@ -9,7 +9,7 @@ SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
 SWEP.Cost					= 2750
-SWEP.MoveSpeed				= 230
+SWEP.MoveSpeed				= 200
 
 SWEP.Spawnable				= true
 SWEP.AdminOnly				= false
@@ -23,7 +23,7 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 SWEP.UseHands 				= false
 
-SWEP.Primary.Damage			= 125
+SWEP.Primary.Damage			= 110
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/kar98/kar_shoot.wav")
 SWEP.Primary.Cone			= 0

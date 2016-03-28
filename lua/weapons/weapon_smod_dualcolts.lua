@@ -24,7 +24,7 @@ SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "duel"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 50
+SWEP.Primary.Damage			= 40
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/colts/fire.wav")
 SWEP.Primary.Cone			= 0.01
