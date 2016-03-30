@@ -42,6 +42,8 @@ SWEP.Primary.Delay			= 1.0
 SWEP.Primary.Ammo			= "smod_3006"
 SWEP.Primary.Automatic 		= false
 
+SWEP.LastBulletSound		= Sound("Weapon_Garand.ClipDing")
+
 SWEP.RecoilMul				= 0.25
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 2
@@ -59,14 +61,33 @@ SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= false
 SWEP.HasDownRecoil			= false
+SWEP.HasSpecialFire			= true
 
 SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= true
 SWEP.IronSightTime			= 0.25
-SWEP.IronSightsPos 			= Vector(-4.97, 5, 1)
+SWEP.IronSightsPos 			= Vector(-2, 0, 2)
 SWEP.IronSightsAng 			= Vector(0, 0.025, 0)
 
 SWEP.DamageFalloff			= 5000
 
 SWEP.DisableReloadUntilEmpty = true
+
+SWEP.HasDryFire	= true
+
+function SWEP:SpecialFire()
+
+	if not self:CanPrimaryAttack() then	return end
+	if self:IsBusy() then return end
+	if self:GetNextPrimaryFire() > CurTime() then return end
+	self.Owner:SetAnimation(PLAYER_ATTACK1)
+	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
+
+	if SERVER then
+		self:Swing(self.Primary.Damage / 2)
+	end
+	
+	self:SetNextPrimaryFire(CurTime() + 1)
+	
+end
