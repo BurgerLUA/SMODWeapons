@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/w_oicw.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 30
+SWEP.Primary.Damage			= 25
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_OICW.Single")
 SWEP.Primary.Cone			= 0.0075

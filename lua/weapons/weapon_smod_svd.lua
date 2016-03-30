@@ -28,7 +28,7 @@ SWEP.Primary.Sound			= Sound("Weapon_SVD.Fire")
 SWEP.Primary.Cone			= 0
 SWEP.Primary.ClipSize		= 10
 SWEP.Primary.SpareClip		= 90
-SWEP.Primary.Delay			= 1/(30/60)
+SWEP.Primary.Delay			= 2
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= true
 

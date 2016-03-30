@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/w_m4a1.mdl"
 SWEP.ViewModelFlip 			= true
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 35
+SWEP.Primary.Damage			= 32
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/m4a1/m4sil-1.wav")
 SWEP.Primary.Cone			= 0.00125
