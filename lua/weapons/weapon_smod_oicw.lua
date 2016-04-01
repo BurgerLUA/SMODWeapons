@@ -44,7 +44,7 @@ SWEP.HasCSSZoom 			= false
 
 SWEP.HasPumpAction 			= false
 SWEP.HasBoltAction 			= false
-SWEP.HasBurstFire 			= true
+SWEP.HasBurstFire 			= false
 SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= true
@@ -60,9 +60,11 @@ SWEP.BurstHeatMul			= 0.5
 SWEP.HasIronSights 			= false
 SWEP.EnableIronCross		= false
 SWEP.HasGoodSights			= false
-SWEP.IronSightTime			= 0.125
-SWEP.IronSightsPos 			= Vector(-3, 20, 0)
-SWEP.IronSightsAng 			= Vector(1.25, 1, 0)
+SWEP.IronSightTime			= 0
+SWEP.IronSightsPos 			= Vector(-10, 0, -10)
+SWEP.IronSightsAng 			= Vector(0, 0, 0)
+
+SWEP.ColorOverlay			= Color(0,255,0,20)
 
 SWEP.DamageFalloff			= 4000
 
