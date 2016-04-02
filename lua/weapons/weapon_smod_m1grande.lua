@@ -76,13 +76,18 @@ SWEP.DisableReloadUntilEmpty = true
 
 SWEP.HasDryFire	= true
 
+SWEP.MeleeSoundMiss			= Sound("weapons/foot/foot_fire.wav")
+SWEP.MeleeSoundWallHit		= Sound("weapons/foot/foot_kickwall.wav")
+SWEP.MeleeSoundFleshSmall	= Sound("weapons/foot/foot_kickbody.wav")
+SWEP.MeleeSoundFleshLarge	= Sound("weapons/foot/foot_kickbody.wav")
+
 function SWEP:SpecialFire()
 
 	--if not self:CanPrimaryAttack() then	return end
 	if self:IsBusy() then return end
 	if self:GetNextPrimaryFire() > CurTime() then return end
 	
-	self:SetNextPrimaryFire(CurTime() + 1)
+	self:SetNextPrimaryFire(CurTime() + 0.75)
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	

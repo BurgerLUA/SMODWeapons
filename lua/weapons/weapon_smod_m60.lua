@@ -25,16 +25,16 @@ SWEP.HoldType				= "shotgun"
 SWEP.Primary.Damage			= 40
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/m60/fire1.wav")
-SWEP.Primary.Cone			= 0.0025
+SWEP.Primary.Cone			= 0.0075
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.SpareClip		= 200
 SWEP.Primary.Delay			= 1/(500/60)
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= true
 
-SWEP.RecoilMul				= 0.5
-SWEP.SideRecoilMul			= 0.5
-SWEP.VelConeMul				= 2
+SWEP.RecoilMul				= 1
+SWEP.SideRecoilMul			= 0.25
+SWEP.VelConeMul				= 5
 SWEP.HeatMul				= 0.5
 
 SWEP.HasScope 				= false
@@ -48,7 +48,7 @@ SWEP.HasBurstFire 			= false
 SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= true
-SWEP.HasDownRecoil			= true
+SWEP.HasDownRecoil			= false
 
 SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true

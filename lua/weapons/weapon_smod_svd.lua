@@ -22,23 +22,23 @@ SWEP.WorldModel				= "models/weapons/w_svd.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 150
+SWEP.Primary.Damage			= 105
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_SVD.Fire")
-SWEP.Primary.Cone			= 0
+SWEP.Primary.Cone			= 0.001
 SWEP.Primary.ClipSize		= 10
 SWEP.Primary.SpareClip		= 90
-SWEP.Primary.Delay			= 2
+SWEP.Primary.Delay			= 0.75
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= true
 
 SWEP.RecoilMul 				= 0.1
 SWEP.SideRecoilMul			= 1
-SWEP.VelConeMul				= 3
+SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 0.25
 
 SWEP.HasScope 				= true
-SWEP.ZoomAmount 			= 12
+SWEP.ZoomAmount 			= 6
 SWEP.HasCrosshair 			= false
 SWEP.HasCSSZoom 			= false
 

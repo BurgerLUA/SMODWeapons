@@ -23,17 +23,17 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 SWEP.UseHands 				= false
 
-SWEP.Primary.Damage			= 110
+SWEP.Primary.Damage			= 200
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/kar98/kar_shoot.wav")
 SWEP.Primary.Cone			= 0
 SWEP.Primary.ClipSize		= 5
 SWEP.Primary.SpareClip		= 50
-SWEP.Primary.Delay			= 2
+SWEP.Primary.Delay			= 1.8
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= false
 
-SWEP.RecoilMul				= 0.25
+SWEP.RecoilMul				= 0.125
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 0.25
@@ -56,23 +56,23 @@ SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= true
 SWEP.IronSightTime			= 0.125
-SWEP.IronSightsPos 			= Vector(0, 0, 0)
-SWEP.IronSightsAng 			= Vector(0, 0, 0)
+SWEP.IronSightsPos 			= Vector(-4, -1, -1)
+SWEP.IronSightsAng 			= Vector(0, 0.05, 0)
 
 SWEP.DamageFalloff			= 5000
 
 function SWEP:SpecialFire()
 
-	if not self:CanPrimaryAttack() then	return end
+	--if not self:CanPrimaryAttack() then	return end
 	if self:IsBusy() then return end
 	if self:GetNextPrimaryFire() > CurTime() then return end
-	self.Owner:SetAnimation(PLAYER_ATTACK1)
-	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
-
-	if SERVER then
-		self:Swing(self.Primary.Damage / 2)
-	end
 	
 	self:SetNextPrimaryFire(CurTime() + 1)
+	self.Owner:SetAnimation(PLAYER_ATTACK1)
+	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	
+	if SERVER and IsFirstTimePredicted() then
+		self:Swing(self.Primary.Damage / 2)
+	end
+
 end
