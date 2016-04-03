@@ -24,13 +24,13 @@ SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "duel"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 40
+SWEP.Primary.Damage			= 30
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/colts/fire.wav")
 SWEP.Primary.Cone			= 0.01
 SWEP.Primary.ClipSize		= 14
 SWEP.Primary.SpareClip		= 14*4
-SWEP.Primary.Delay			= 1/7
+SWEP.Primary.Delay			= 1/10
 SWEP.Primary.Ammo			= "SniperPenetratedRound"
 SWEP.Primary.Automatic 		= false
 
@@ -38,7 +38,7 @@ SWEP.EnableTracer			= false
 
 SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 0.1
-SWEP.VelConeMul				= 1
+SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 0.5
 
 SWEP.HasScope 				= false
@@ -46,9 +46,11 @@ SWEP.ZoomAmount 			= 0.5
 SWEP.HasCrosshair 			= true
 SWEP.HasCSSZoom 			= false
 
+SWEP.BurstOverride			= 2
+
 SWEP.HasPumpAction 			= false
 SWEP.HasBoltAction 			= false
-SWEP.HasBurstFire 			= false
+SWEP.HasBurstFire 			= true
 SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
 SWEP.HasSideRecoil			= true

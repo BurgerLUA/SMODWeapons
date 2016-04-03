@@ -23,20 +23,20 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 SWEP.UseHands 				= false
 
-SWEP.Primary.Damage			= 200
+SWEP.Primary.Damage			= 115
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/kar98/kar_shoot.wav")
-SWEP.Primary.Cone			= 0
+SWEP.Primary.Cone			= 0.0025
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.SpareClip		= 50
-SWEP.Primary.Delay			= 1.8
+SWEP.Primary.SpareClip		= 8*4
+SWEP.Primary.Delay			= 1.7
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= false
 
-SWEP.RecoilMul				= 0.125
+SWEP.RecoilMul				= 0.5
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 2
-SWEP.HeatMul				= 0.25
+SWEP.HeatMul				= 5
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 1

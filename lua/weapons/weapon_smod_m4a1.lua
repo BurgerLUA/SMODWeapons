@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/w_m4a1.mdl"
 SWEP.ViewModelFlip 			= true
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 32
+SWEP.Primary.Damage			= 35
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/m4a1/m4sil-1.wav")
 SWEP.Primary.Cone			= 0.00125
@@ -32,10 +32,10 @@ SWEP.Primary.Delay			= 1/10
 SWEP.Primary.Ammo			= "AirboatGun"
 SWEP.Primary.Automatic 		= false
 
-SWEP.RecoilMul				= 0.5
+SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 0.5
 SWEP.VelConeMul				= 2
-SWEP.HeatMul				= 0.75
+SWEP.HeatMul				= 1
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 1
@@ -53,8 +53,8 @@ SWEP.HasDownRecoil			= false
 SWEP.BurstOverride			= 3
 SWEP.BurstConeMul			= 1
 SWEP.BurstSpeedOverride 	= 1.5
-SWEP.BurstRecoilMul			= 0.5
-SWEP.BurstHeatMul			= 0.5
+SWEP.BurstRecoilMul			= 0.25
+SWEP.BurstHeatMul			= 0.25
 
 SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
@@ -63,4 +63,4 @@ SWEP.IronSightTime			= 0.125
 SWEP.IronSightsPos 			= Vector(0, 0, 1)
 SWEP.IronSightsAng 			= Vector(0, 0, 0)
 
-SWEP.DamageFalloff			= 4000
+SWEP.DamageFalloff			= 2000

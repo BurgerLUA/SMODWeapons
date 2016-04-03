@@ -34,8 +34,8 @@ SWEP.Primary.Damage			= 10
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/grease/greasegun_shoot.wav")
 SWEP.Primary.Cone			= 0.04
-SWEP.Primary.ClipSize		= 10
-SWEP.Primary.SpareClip		= 10
+SWEP.Primary.ClipSize		= 30
+SWEP.Primary.SpareClip		= 0
 SWEP.Primary.Delay			= 0.1
 SWEP.Primary.Ammo			= "smod_beans2"
 SWEP.Primary.Automatic 		= true
@@ -108,7 +108,7 @@ function SWEP:ShootSpicyBean(ShootPos,ShootAng)
 	
 	local phys = ent:GetPhysicsObject()
 	if IsValid(phys) then
-		phys:ApplyForceCenter(ShootAng:Forward()*2000 + self.Owner:GetVelocity())
+		phys:ApplyForceCenter(ShootAng:Forward()*500 + self.Owner:GetVelocity())
 	end
 	
 end

@@ -24,13 +24,13 @@ SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "revolver"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 30
+SWEP.Primary.Damage			= 40
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_CZ52.Single")
 SWEP.Primary.Cone			= 0.0025
 SWEP.Primary.ClipSize		= 8
 SWEP.Primary.SpareClip		= 8*4
-SWEP.Primary.Delay			= 1/8
+SWEP.Primary.Delay			= 1/10
 SWEP.Primary.Ammo			= "SniperPenetratedRound"
 SWEP.Primary.Automatic 		= false
 

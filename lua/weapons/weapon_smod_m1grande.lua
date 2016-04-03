@@ -4,7 +4,7 @@ if CLIENT then
 end
 
 SWEP.Category				= "SMOD"
-SWEP.PrintName				= "7.62MM M1 GRANDE"
+SWEP.PrintName				= ".30-06 M1 GRANDE"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -31,23 +31,22 @@ if CLIENT then
 	language.Add("smod_3006_ammo",".30-06 Springfield")
 end
 
-
-SWEP.Primary.Damage			= 100
+SWEP.Primary.Damage			= 60
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_Garand.Fire")
-SWEP.Primary.Cone			= 0.00125
+SWEP.Primary.Cone			= 0.0025
 SWEP.Primary.ClipSize		= 8
-SWEP.Primary.SpareClip		= 40
-SWEP.Primary.Delay			= 1.0
+SWEP.Primary.SpareClip		= 8*4
+SWEP.Primary.Delay			= 1/5
 SWEP.Primary.Ammo			= "smod_3006"
 SWEP.Primary.Automatic 		= false
 
 SWEP.LastBulletSound		= Sound("Weapon_Garand.ClipDing")
 
-SWEP.RecoilMul				= 0.25
+SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 2
-SWEP.HeatMul				= 0.25
+SWEP.HeatMul				= 1
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 1
@@ -83,6 +82,8 @@ SWEP.MeleeSoundFleshLarge	= Sound("weapons/foot/foot_kickbody.wav")
 
 function SWEP:SpecialFire()
 
+	PrintTable(GetActivities(self))
+	
 	--if not self:CanPrimaryAttack() then	return end
 	if self:IsBusy() then return end
 	if self:GetNextPrimaryFire() > CurTime() then return end
