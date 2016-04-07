@@ -163,6 +163,61 @@ SMODstbl["sound"] = {"weapons/grease/tommy_reload_clipin.wav"}
 SMODstbl["name"] = "Weapon_Kar98.Clipin"
 
 sound.Add(SMODstbl)
+//SMOD Katana--------------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sword/sword_deploy1.wav"}
+SMODstbl["name"] = "Weapon_SMODSword.Deploy"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/sword/sword_hit1.wav","weapons/sword/sword_hit2.wav"}
+SMODstbl["name"] = "Weapon_SMODSword.Hit"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sword/sword_hitwall1.wav"}
+SMODstbl["name"] = "Weapon_SMODSword.HitWall"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/sword/sword_slash1.wav","weapons/sword/sword_slash2.wav"}
+SMODstbl["name"] = "Weapon_SMODSword.Slash"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sword/sword_stab.wav"}
+SMODstbl["name"] = "Weapon_SMODSword.Stab"
+
+sound.Add(SMODstbl)
 //SMOD M4A1----------------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = 1
@@ -350,9 +405,42 @@ SMODstbl["sound"] = {"weapons/drink/drink.wav"}
 SMODstbl["name"] = "Weapon_Drink.Drink"
 
 sound.Add(SMODstbl)
+//SMOD Pulse Machinegun----------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,115"
+SMODstbl["sound"] = {"weapons/pulsemg/pulsemg_fire1.wav"}
+SMODstbl["name"] = "Weapon_PulseMG.Single"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/pulsemg/clipout.wav"}
+SMODstbl["name"] = "Weapon_PulseMG.Clipout"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/pulsemg/clipin.wav"}
+SMODstbl["name"] = "Weapon_PulseMG.Clipin"
+
+sound.Add(SMODstbl)
 //SMOD Soybeans (Mamehand)-------------------------------------------------
 local SMODstbl = {}
-SMODstbl["channel"] = "4"
+SMODstbl["channel"] = 4
 SMODstbl["level"] = "105"
 SMODstbl["volume"] = "1.0"
 SMODstbl["CompatibilityAttenuation"] = "1"
