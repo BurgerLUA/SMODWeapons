@@ -4,7 +4,7 @@ if CLIENT then
 end
 
 SWEP.Category				= "SMOD"
-SWEP.PrintName				= "7.62MM KARABINER 98K"
+SWEP.PrintName				= "7.92x57MM KARABINER 98K"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -23,14 +23,20 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 SWEP.UseHands 				= false
 
-SWEP.Primary.Damage			= 115
+game.AddAmmoType({name = "smod_mauser"})
+
+if CLIENT then 
+	language.Add("smod_mauser_ammo","7.92x57mm Mauser")
+end
+
+SWEP.Primary.Damage			= 100
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/kar98/kar_shoot.wav")
-SWEP.Primary.Cone			= 0.0025
+SWEP.Primary.Cone			= 0.004
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.SpareClip		= 8*4
+SWEP.Primary.SpareClip		= 5*4
 SWEP.Primary.Delay			= 1.7
-SWEP.Primary.Ammo			= "StriderMinigun"
+SWEP.Primary.Ammo			= "smod_mauser"
 SWEP.Primary.Automatic 		= false
 
 SWEP.RecoilMul				= 0.5
@@ -59,7 +65,7 @@ SWEP.IronSightTime			= 0.125
 SWEP.IronSightsPos 			= Vector(-4, -1, -1)
 SWEP.IronSightsAng 			= Vector(0, 0.05, 0)
 
-SWEP.DamageFalloff			= 5000
+SWEP.DamageFalloff			= 1500
 
 function SWEP:SpecialFire()
 
@@ -72,7 +78,7 @@ function SWEP:SpecialFire()
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	
 	if SERVER and IsFirstTimePredicted() then
-		self:Swing(self.Primary.Damage / 2)
+		self:Swing(self.Primary.Damage * 1)
 	end
 
 end

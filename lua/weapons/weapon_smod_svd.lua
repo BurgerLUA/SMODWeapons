@@ -9,7 +9,7 @@ SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
 SWEP.Cost					= 5000
-SWEP.MoveSpeed				= 210
+SWEP.MoveSpeed				= 175
 
 SWEP.Spawnable				= true
 SWEP.AdminOnly				= false
@@ -22,23 +22,23 @@ SWEP.WorldModel				= "models/weapons/w_svd.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 60
+SWEP.Primary.Damage			= 55
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_SVD.Fire")
-SWEP.Primary.Cone			= 0.001
+SWEP.Primary.Cone			= 0
 SWEP.Primary.ClipSize		= 10
-SWEP.Primary.SpareClip		= 90
+SWEP.Primary.SpareClip		= 10*4
 SWEP.Primary.Delay			= 0.75
 SWEP.Primary.Ammo			= "StriderMinigun"
 SWEP.Primary.Automatic 		= true
 
-SWEP.RecoilMul 				= 0.1
-SWEP.SideRecoilMul			= 1
-SWEP.VelConeMul				= 2
-SWEP.HeatMul				= 0.25
+SWEP.RecoilMul 				= 1
+SWEP.SideRecoilMul			= 0.5
+SWEP.VelConeMul				= 0
+SWEP.HeatMul				= 0
 
 SWEP.HasScope 				= true
-SWEP.ZoomAmount 			= 6
+SWEP.ZoomAmount 			= 11
 SWEP.HasCrosshair 			= false
 SWEP.HasCSSZoom 			= false
 
@@ -57,4 +57,6 @@ SWEP.IronSightTime			= 0.125
 SWEP.IronSightsPos 			= Vector(-5.921, 0, 1.679)
 SWEP.IronSightsAng 			= Vector(0, 0, 0)
 
-SWEP.DamageFalloff			= 5000
+SWEP.DamageFalloff			= 4000
+
+SWEP.CustomScope = Material("vgui/svdscope2")
