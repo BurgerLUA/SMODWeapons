@@ -54,7 +54,7 @@ SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= false
 SWEP.IronSightTime			= 0.125
-SWEP.IronSightsPos 			= Vector(-6, 0, 1)
+SWEP.IronSightsPos 			= Vector(-1, 0, 1)
 SWEP.IronSightsAng 			= Vector(0, 0, -7)
 
 SWEP.DamageFalloff			= 1000
