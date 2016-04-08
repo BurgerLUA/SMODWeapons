@@ -29,13 +29,13 @@ SWEP.Primary.Cone			= 0.0025
 SWEP.Primary.ClipSize		= 90
 SWEP.Primary.SpareClip		= 90*4
 SWEP.Primary.Delay			= 1/(800/60)
-SWEP.Primary.Ammo			= "StriderMinigun"
+SWEP.Primary.Ammo			= "ar2"
 SWEP.Primary.Automatic 		= true
 
 SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 0.25
 SWEP.VelConeMul				= 1
-SWEP.HeatMul				= 0.25
+SWEP.HeatMul				= 1
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 0.5
@@ -58,6 +58,4 @@ SWEP.IronSightsPos 			= Vector(-6, 0, 1)
 SWEP.IronSightsAng 			= Vector(0, 0, -7)
 
 SWEP.DamageFalloff			= 1000
-
-
-SWEP.HasBuildUp				= true
+SWEP.HasBuildUp				= false

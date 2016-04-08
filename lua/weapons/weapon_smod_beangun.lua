@@ -6,7 +6,7 @@ end
 SWEP.Category				= "SMOD"
 SWEP.PrintName				= "BEAN GUN"
 SWEP.Base					= "weapon_cs_base"
-SWEP.WeaponType				= "Free"
+SWEP.WeaponType				= "Primary"
 
 SWEP.Cost					= 1500
 SWEP.MoveSpeed				= 250
@@ -14,7 +14,7 @@ SWEP.MoveSpeed				= 250
 SWEP.Spawnable				= true
 SWEP.AdminOnly				= false
 
-SWEP.Slot					= 4
+SWEP.Slot					= 2
 SWEP.SlotPos				= 1
 
 SWEP.ViewModel 				= "models/weapons/v_grease.mdl"

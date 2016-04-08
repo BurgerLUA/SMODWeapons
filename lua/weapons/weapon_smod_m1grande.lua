@@ -31,7 +31,7 @@ if CLIENT then
 	language.Add("smod_3006_ammo",".30-06 Springfield")
 end
 
-SWEP.Primary.Damage			= 50
+SWEP.Primary.Damage			= 55
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_Garand.Fire")
 SWEP.Primary.Cone			= 0.0025
@@ -69,7 +69,7 @@ SWEP.IronSightTime			= 0.25
 SWEP.IronSightsPos 			= Vector(-4.95, 0, 2)
 SWEP.IronSightsAng 			= Vector(0, 0.025, 0)
 
-SWEP.DamageFalloff			= 1500
+SWEP.DamageFalloff			= 1000
 
 SWEP.DisableReloadUntilEmpty = true
 
@@ -93,7 +93,7 @@ function SWEP:SpecialFire()
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	
 	if SERVER and IsFirstTimePredicted() then
-		self:Swing(self.Primary.Damage * 0.75)
+		self:Swing(75)
 	end
 
 end

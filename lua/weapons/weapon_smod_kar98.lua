@@ -32,15 +32,15 @@ end
 SWEP.Primary.Damage			= 100
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/kar98/kar_shoot.wav")
-SWEP.Primary.Cone			= 0.004
+SWEP.Primary.Cone			= 0.008
 SWEP.Primary.ClipSize		= 5
 SWEP.Primary.SpareClip		= 5*4
 SWEP.Primary.Delay			= 1.7
 SWEP.Primary.Ammo			= "smod_mauser"
 SWEP.Primary.Automatic 		= false
 
-SWEP.RecoilMul				= 0.5
-SWEP.SideRecoilMul			= 1
+SWEP.RecoilMul				= 0.2
+SWEP.SideRecoilMul			= 0.25
 SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 5
 
@@ -54,7 +54,7 @@ SWEP.HasBoltAction 			= true
 SWEP.HasBurstFire 			= false
 SWEP.HasSilencer 			= false
 SWEP.HasDoubleZoom			= false
-SWEP.HasSideRecoil			= false
+SWEP.HasSideRecoil			= true
 SWEP.HasDownRecoil			= false
 SWEP.HasSpecialFire			= true
 
@@ -65,7 +65,7 @@ SWEP.IronSightTime			= 0.125
 SWEP.IronSightsPos 			= Vector(-4, -1, -1)
 SWEP.IronSightsAng 			= Vector(0, 0.05, 0)
 
-SWEP.DamageFalloff			= 1500
+SWEP.DamageFalloff			= 1000
 
 function SWEP:SpecialFire()
 
@@ -78,7 +78,7 @@ function SWEP:SpecialFire()
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	
 	if SERVER and IsFirstTimePredicted() then
-		self:Swing(self.Primary.Damage * 1)
+		self:Swing(90)
 	end
 
 end
