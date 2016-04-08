@@ -168,9 +168,12 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 
 				local Damage = dmginfo:GetDamage()
 				
-				print(Damage)
+				--print(Damage)
 				
-				Weapon:ShootBullet(Damage, 1, 0.01, victim:GetShootPos(), victim:GetAimVector(), true)
+				if Damage/2 > 10 then
+					Weapon:ShootBullet(Damage / 2, 1, 0.01, victim:GetShootPos(), victim:GetAimVector(), true)
+				end
+				
 				Weapon:BlockDamage(Damage)
 
 				
