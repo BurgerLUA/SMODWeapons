@@ -97,9 +97,11 @@ function SWEP:SpareThink()
 
 	if SERVER then
 		if self.Owner:KeyDown(IN_ATTACK2) and self:GetNextSecondaryFire() <= CurTime() then
+			self:SetIsBlocking( true )
 			self:SetHoldType("slam")
 		else
 			self:SetHoldType(self.HoldType)
+			self:SetIsBlocking( false )
 		end
 	end
 
@@ -172,7 +174,6 @@ function GetActivities( ent )
   return t
 end
 
-
 function SWEP:BlockDamage(Damage)
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	self:SendWeaponAnim(ACT_VM_HITCENTER)
@@ -180,16 +181,18 @@ function SWEP:BlockDamage(Damage)
 	self.Owner:EmitSound(Sound("FX_RicochetSound.Ricochet"))
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay*0.5)
 	--self:SetNextSecondaryFire(CurTime() + self.Primary.Delay*0.25)
-	self:AddDurability(- math.ceil(Damage*0.1) )
+	self:AddDurability(- math.ceil(Damage*0.15) )
 end
 
 function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 
 	local attacker = dmginfo:GetAttacker()
 	local Weapon = victim:GetActiveWeapon()
+	
+	local VictimKeyDown = Weapon:GetIsBlocking()
 
 	if Weapon and Weapon ~= NULL and Weapon:GetClass() == "weapon_smod_katana" then
-		if victim:KeyDown(IN_ATTACK2) and Weapon:GetNextSecondaryFire() <= CurTime() then
+		if VictimKeyDown and Weapon:GetNextSecondaryFire() <= CurTime() then
 		
 		
 		
@@ -197,7 +200,11 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 			if hitgroup == HITGROUP_RIGHTARM then
 			
 				victim:EmitSound("physics/metal/metal_sheet_impact_soft2.wav")
-				CSS_DropWeapon(victim,Weapon)
+				
+				if SERVER then
+					CSS_DropWeapon(victim,Weapon)
+				end
+				
 				return true
 			
 			elseif (hitgroup == HITGROUP_LEFTLEG or hitgroup == HITGROUP_RIGHTLEG) and !victim:Crouching() then

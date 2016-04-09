@@ -20,7 +20,7 @@ SWEP.SlotPos				= 1
 SWEP.ViewModel 				= "models/weapons/v_pulsemg.mdl"
 SWEP.WorldModel				= "models/weapons/w_pulsemg.mdl"
 SWEP.VModelFlip 			= false
-SWEP.HoldType				= "shotgun"
+SWEP.HoldType				= "smg"
 
 SWEP.Primary.Damage			= 25
 SWEP.Primary.NumShots		= 1
