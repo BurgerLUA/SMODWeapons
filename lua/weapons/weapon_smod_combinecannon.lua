@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/w_pulsemg.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "smg"
 
-SWEP.Primary.Damage			= 25
+SWEP.Primary.Damage			= 20
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_PulseMG.Single")
 SWEP.Primary.Cone			= 0.005
