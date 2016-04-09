@@ -28,21 +28,21 @@ if CLIENT then
 	language.Add("smod_weeb_ammo","Weeb")
 end
 
-SWEP.Primary.Damage			= 75
+SWEP.Primary.Damage			= 90
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.SpareClip		= 0
-SWEP.Primary.Delay			= 0.4
+SWEP.Primary.Delay			= 0.6
 SWEP.Primary.Ammo			= "smod_weeb"
 SWEP.Primary.Automatic 		= true 
 
-SWEP.Secondary.Damage		= 100
+SWEP.Secondary.Damage		= 0
 SWEP.Secondary.NumShots		= 1
 SWEP.Secondary.ClipSize		= -1
 SWEP.Secondary.SpareClip	= -1
 SWEP.Secondary.Delay		= 1
 SWEP.Secondary.Ammo			= "none"
-SWEP.Secondary.Automatic 	= true 
+SWEP.Secondary.Automatic 	= false 
 
 SWEP.RecoilMul				= 1
 SWEP.HasScope 				= false
@@ -62,22 +62,59 @@ SWEP.MeleeSoundWallHit		= Sound("Weapon_SMODSword.HitWall")
 SWEP.MeleeSoundFleshSmall	= Sound("Weapon_SMODSword.Hit")
 SWEP.MeleeSoundFleshLarge	= Sound("Weapon_SMODSword.Stab")
 
-SWEP.DamageFalloff			= 40
+SWEP.IronSightTime			= 0.125
+SWEP.IronSightsPos 			= Vector(0, 0, 0)
+SWEP.IronSightsAng 			= Vector(0, 0, -45)
+
+SWEP.DamageFalloff			= 1000
+
+SWEP.EnableBlocking			= true
 
 function SWEP:PrimaryAttack()
 	if self:IsUsing() then return end
 	if self:GetNextPrimaryFire() > CurTime() then return end
+	if self.Owner:KeyDown(IN_ATTACK2) then return end
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	self:SendWeaponAnim(ACT_VM_HITCENTER)
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
 	self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
-	if self:Swing(self.Primary.Damage) then
+	if self:NewSwing(self.Primary.Damage) then
 		self:AddDurability(-math.random(1,3))
 	end
+	
+	--PrintTable(self.Owner:GetSequenceList())
+	
+end
+
+function SWEP:SpareThink()
+
+	if self.Owner:KeyDown(IN_ATTACK2) then
+		self:SetNextPrimaryFire(CurTime() + self.IronSightTime*2)
+		self.MoveSpeed				= 250*0.25
+	else
+		self.MoveSpeed				= 250
+	end
+
+	if SERVER then
+		if self.Owner:KeyDown(IN_ATTACK2) and self:GetNextSecondaryFire() <= CurTime() then
+			self:SetHoldType("slam")
+		else
+			self:SetHoldType(self.HoldType)
+		end
+	end
+
 end
 
 
 function SWEP:SecondaryAttack()
+	--[[
+	local Sequence = self.Owner:LookupSequence("fist_block")
+	print(Sequence)
+	self.Owner:ResetSequence( Sequence )
+	--]]
+	--print(self.Owner:GetSequence())
+	
+	--[[
 	if self:IsUsing() then return end
 	if self:GetNextSecondaryFire() > CurTime() then return end
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
@@ -87,6 +124,7 @@ function SWEP:SecondaryAttack()
 	if self:Swing(self.Secondary.Damage) then
 		self:AddDurability(-math.random(5,8))
 	end
+	--]]
 end
 
 function SWEP:Reload()
@@ -98,9 +136,10 @@ function SWEP:AddDurability(amount)
 	self:SetClip1( math.Clamp(self:Clip1() + amount,0,100) )
 
 	if self:Clip1() <= 0 then
-		self.Owner:EmitSound(Sound("AlyxEMP.Discharge"))
+		self.Owner:EmitSound("physics/metal/sawblade_stick1.wav")
 		self.Owner:StripWeapon(self.Weapon:GetClass())
 	end
+	
 	
 	--[[
 	self.Owner:SetAmmo( math.Clamp(self.Owner:GetAmmoCount(self.Primary.Ammo) + amount,0,100),self.Primary.Ammo)
@@ -139,8 +178,8 @@ function SWEP:BlockDamage(Damage)
 	self:SendWeaponAnim(ACT_VM_HITCENTER)
 	self:EmitGunSound(self.MeleeSoundMiss)
 	self.Owner:EmitSound(Sound("FX_RicochetSound.Ricochet"))
-	self:SetNextPrimaryFire(CurTime() + 1)
-	self:SetNextSecondaryFire(CurTime() + 1)
+	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay*0.5)
+	--self:SetNextSecondaryFire(CurTime() + self.Primary.Delay*0.25)
 	self:AddDurability(- math.ceil(Damage*0.1) )
 end
 
@@ -150,39 +189,51 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 	local Weapon = victim:GetActiveWeapon()
 
 	if Weapon and Weapon ~= NULL and Weapon:GetClass() == "weapon_smod_katana" then
-		if victim:KeyDown(IN_RELOAD) then
+		if victim:KeyDown(IN_ATTACK2) and Weapon:GetNextSecondaryFire() <= CurTime() then
 		
-			local VictimAngles = victim:GetAngles() + Angle(0,180,0)
-			local AttackerAngles = attacker:GetAngles()
+		
+		
+		
+			if hitgroup == HITGROUP_RIGHTARM then
 			
-			VictimAngles:Normalize()
-			AttackerAngles:Normalize()
+				victim:EmitSound("physics/metal/metal_sheet_impact_soft2.wav")
+				CSS_DropWeapon(victim,Weapon)
+				return true
 			
-			local NewAngles = VictimAngles - AttackerAngles
+			elseif (hitgroup == HITGROUP_LEFTLEG or hitgroup == HITGROUP_RIGHTLEG) and !victim:Crouching() then
 			
-			NewAngles:Normalize()
 			
-			local Yaw = math.abs(NewAngles.y)
+			elseif hitgroup == HITGROUP_HEAD and victim:Crouching() then
+		
 			
-			if Yaw < 30 then
+			else
 
-				local Damage = dmginfo:GetDamage()
+				local VictimAngles = victim:GetAngles() + Angle(0,180,0)
+				local AttackerAngles = attacker:GetAngles()
 				
-				--print(Damage)
+				VictimAngles:Normalize()
+				AttackerAngles:Normalize()
 				
-				if Damage/2 > 10 then
-					Weapon:ShootBullet(Damage / 2, 1, 0.01, victim:GetShootPos(), victim:GetAimVector(), true)
-				end
+				local NewAngles = VictimAngles - AttackerAngles
 				
-				Weapon:BlockDamage(Damage)
+				NewAngles:Normalize()
+				
+				local Yaw = math.abs(NewAngles.y)
+				
+				if Yaw < 30 then
 
-				
-				
-				
-				if CLIENT then
+					local Damage = dmginfo:GetDamage()
+					
+					--print(Damage)
+					
+					if Damage > 1 then
+						Weapon:ShootBullet(Damage, 1, 0.025, victim:GetShootPos(), victim:GetAimVector(), true)
+					end
+					
+					Weapon:BlockDamage(Damage)
+					
 					return true
-				else
-					return true
+					
 				end
 				
 			end
