@@ -188,10 +188,11 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 
 	local attacker = dmginfo:GetAttacker()
 	local Weapon = victim:GetActiveWeapon()
-	
-	local VictimKeyDown = Weapon:GetIsBlocking()
 
 	if Weapon and Weapon ~= NULL and Weapon:GetClass() == "weapon_smod_katana" then
+	
+		local VictimKeyDown = Weapon:GetIsBlocking()
+	
 		if VictimKeyDown and Weapon:GetNextSecondaryFire() <= CurTime() then
 		
 		
