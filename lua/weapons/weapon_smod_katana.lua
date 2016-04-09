@@ -9,7 +9,7 @@ SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Free"
 
 SWEP.Cost					= 0
-SWEP.MoveSpeed				= 250
+SWEP.MoveSpeed				= 230
 
 SWEP.Spawnable				= true
 SWEP.AdminOnly				= false
@@ -28,7 +28,7 @@ if CLIENT then
 	language.Add("smod_weeb_ammo","Weeb")
 end
 
-SWEP.Primary.Damage			= 90
+SWEP.Primary.Damage			= 55
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.SpareClip		= 0
@@ -78,7 +78,7 @@ function SWEP:PrimaryAttack()
 	self:SendWeaponAnim(ACT_VM_HITCENTER)
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
 	self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
-	if self:NewSwing(self.Primary.Damage) then
+	if self:NewSwing(self.Primary.Damage*0.5 + (self.Primary.Damage*0.5*self:Clip1()*0.01) ) then
 		self:AddDurability(-math.random(1,3))
 	end
 	
@@ -90,9 +90,9 @@ function SWEP:SpareThink()
 
 	if self.Owner:KeyDown(IN_ATTACK2) then
 		self:SetNextPrimaryFire(CurTime() + self.IronSightTime*2)
-		self.MoveSpeed				= 250*0.25
+		self.MoveSpeed				= 220*0.25
 	else
-		self.MoveSpeed				= 250
+		self.MoveSpeed				= 220
 	end
 
 	if SERVER then
@@ -181,7 +181,7 @@ function SWEP:BlockDamage(Damage)
 	self.Owner:EmitSound(Sound("FX_RicochetSound.Ricochet"))
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay*0.5)
 	--self:SetNextSecondaryFire(CurTime() + self.Primary.Delay*0.25)
-	self:AddDurability(- math.ceil(Damage*0.15) )
+	self:AddDurability(- math.ceil(Damage*0.1) )
 end
 
 function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
