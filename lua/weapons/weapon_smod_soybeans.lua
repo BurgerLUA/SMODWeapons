@@ -3,7 +3,7 @@ if CLIENT then
 	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_SoyBeans")
 end
 
-SWEP.Category				= "SMOD"
+SWEP.Category				= "Extra Weapons"
 SWEP.PrintName				= "SOY BEANS"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Free"

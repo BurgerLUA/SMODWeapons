@@ -3,14 +3,13 @@ if CLIENT then
 	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_cz52")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "7.62mm CZ 52"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "CZ 52"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Secondary"
 
 SWEP.Cost					= 1500
 SWEP.MoveSpeed				= 200
-
 
 SWEP.Spawnable				= true
 SWEP.AdminOnly				= false
@@ -31,7 +30,7 @@ SWEP.Primary.Cone			= 0.0025
 SWEP.Primary.ClipSize		= 8
 SWEP.Primary.SpareClip		= 8*4
 SWEP.Primary.Delay			= 1/10
-SWEP.Primary.Ammo			= "SniperPenetratedRound"
+SWEP.Primary.Ammo			= "css_45acp"
 SWEP.Primary.Automatic 		= false
 
 SWEP.RecoilMul				= 1

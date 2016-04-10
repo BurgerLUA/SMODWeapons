@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_OICW")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "5.56MM OICW"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "OICW"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -29,7 +29,7 @@ SWEP.Primary.Cone			= 0.0075
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.SpareClip		= 90
 SWEP.Primary.Delay			= 1/(800/60)
-SWEP.Primary.Ammo			= "AirboatGun"
+SWEP.Primary.Ammo			= "css_556mm"
 SWEP.Primary.Automatic 		= true
 
 SWEP.RecoilMul				= 1

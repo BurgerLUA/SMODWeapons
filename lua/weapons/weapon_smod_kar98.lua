@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_Karabiner98")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "7.92x57MM KARABINER 98K"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "KARABINER 98K"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -23,7 +23,11 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 SWEP.UseHands 				= false
 
-game.AddAmmoType({name = "smod_mauser"})
+game.AddAmmoType({
+	name = "smod_mauser",
+	dmgtype = DMG_BULLET,
+	tracer = TRACER_LINE_AND_WHIZ
+})
 
 if CLIENT then 
 	language.Add("smod_mauser_ammo","7.92x57mm Mauser")

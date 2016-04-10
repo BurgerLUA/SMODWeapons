@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_m4a1")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "5.56MM MARKSMAN M4A1"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "M4A1 MARKSMAN"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -29,7 +29,7 @@ SWEP.Primary.Cone			= 0.00125
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.SpareClip		= 90
 SWEP.Primary.Delay			= 1/10
-SWEP.Primary.Ammo			= "AirboatGun"
+SWEP.Primary.Ammo			= "css_556mm"
 SWEP.Primary.Automatic 		= false
 
 SWEP.RecoilMul				= 1

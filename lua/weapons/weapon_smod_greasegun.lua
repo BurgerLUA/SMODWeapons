@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon = surface.GetTextureID("vgui/killicons/smod_m3greasegun")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= ".45ACP GREASEGUN"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "GREASEGUN"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -29,7 +29,7 @@ SWEP.Primary.Cone			= 0.0075
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.SpareClip		= 60
 SWEP.Primary.Delay			= 1/(450/60)
-SWEP.Primary.Ammo			= "SniperPenetratedRound"
+SWEP.Primary.Ammo			= "css_45acp"
 SWEP.Primary.Automatic 		= true
 
 SWEP.RecoilMul				= 0.5

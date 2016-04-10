@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_SVD")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "7.62MM SVD-63"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "SVD-63"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -29,7 +29,7 @@ SWEP.Primary.Cone			= 0
 SWEP.Primary.ClipSize		= 10
 SWEP.Primary.SpareClip		= 10*4
 SWEP.Primary.Delay			= 0.75
-SWEP.Primary.Ammo			= "StriderMinigun"
+SWEP.Primary.Ammo			= "css_762mm"
 SWEP.Primary.Automatic 		= true
 
 SWEP.RecoilMul 				= 1

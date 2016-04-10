@@ -1,4 +1,4 @@
-SWEP.Category				= "SMOD"
+SWEP.Category				= "Extra Weapons"
 SWEP.PrintName				= "PURPLE DRANK"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Free"

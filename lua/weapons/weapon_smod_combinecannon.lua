@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_PulseMG")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "Pulse MG"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "PULSE MACHINEGUN"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 

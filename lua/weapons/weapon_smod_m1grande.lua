@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_M1Garand")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= ".30-06 M1 GRANDE"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "M1 GARAND"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Primary"
 
@@ -25,7 +25,11 @@ SWEP.UseHands 				= false
 
 --.30-06 Springfield
 
-game.AddAmmoType({name = "smod_3006"})
+game.AddAmmoType({
+	name = "smod_3006",
+	dmgtype = DMG_BULLET,
+	tracer = TRACER_LINE_AND_WHIZ
+})
 
 if CLIENT then 
 	language.Add("smod_3006_ammo",".30-06 Springfield")

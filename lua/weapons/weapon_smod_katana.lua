@@ -3,8 +3,8 @@ if CLIENT then
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_Sword")
 end
 
-SWEP.Category				= "SMOD"
-SWEP.PrintName				= "SWORD OF THE WEEBS"
+SWEP.Category				= "Extra Weapons"
+SWEP.PrintName				= "KATANA"
 SWEP.Base					= "weapon_cs_base"
 SWEP.WeaponType				= "Free"
 
@@ -188,17 +188,32 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 
 	local attacker = dmginfo:GetAttacker()
 	local Weapon = victim:GetActiveWeapon()
+	local Damage = dmginfo:GetDamage()
+	local WeaponAttacker = dmginfo:GetInflictor()
 
 	if Weapon and Weapon ~= NULL and Weapon:GetClass() == "weapon_smod_katana" then
 	
 		local VictimKeyDown = Weapon:GetIsBlocking()
+		
+		local ShouldProceed = true
+		
+		if attacker:IsPlayer() and attacker:GetActiveWeapon() and attacker:GetActiveWeapon():IsValid() then
+			WeaponAttacker = attacker:GetActiveWeapon()
+			
+			if WeaponAttacker:IsScripted() and (WeaponAttacker.Base == "weapon_cs_base" or WeaponAttacker.BurgerBase) then
+				if WeaponAttacker.Primary.NumShots > 1 then
+					ShouldProceed = false
+				end
+			end
+		end
+		
+
+		
+		
 	
-		if VictimKeyDown and Weapon:GetNextSecondaryFire() <= CurTime() then
+		if ShouldProceed and VictimKeyDown and Weapon:GetNextSecondaryFire() <= CurTime() then
 		
-		
-		
-		
-			if hitgroup == HITGROUP_RIGHTARM then
+			if hitgroup == HITGROUP_RIGHTARM and Damage >= 50 then
 			
 				victim:EmitSound("physics/metal/metal_sheet_impact_soft2.wav")
 				
@@ -230,8 +245,6 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 				
 				if Yaw < 30 then
 
-					local Damage = dmginfo:GetDamage()
-					
 					--print(Damage)
 					
 					if Damage > 1 then
