@@ -139,7 +139,9 @@ function SWEP:AddDurability(amount)
 
 	if self:Clip1() <= 0 then
 		self.Owner:EmitSound("physics/metal/sawblade_stick1.wav")
-		self.Owner:StripWeapon(self.Weapon:GetClass())
+		if self and SERVER then
+			self.Owner:StripWeapon(self:GetClass())
+		end
 	end
 	
 	
