@@ -28,11 +28,11 @@ if CLIENT then
 	language.Add("smod_weeb_ammo","Weeb")
 end
 
-SWEP.Primary.Damage			= 55
+SWEP.Primary.Damage			= 50
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.SpareClip		= 0
-SWEP.Primary.Delay			= 0.6
+SWEP.Primary.Delay			= 0.5
 SWEP.Primary.Ammo			= "smod_weeb"
 SWEP.Primary.Automatic 		= true 
 
