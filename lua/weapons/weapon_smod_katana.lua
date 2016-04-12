@@ -208,11 +208,7 @@ function KATANA_ScalePlayerDamage(victim,hitgroup,dmginfo)
 				end
 			end
 		end
-		
 
-		
-		
-	
 		if ShouldProceed and VictimKeyDown and Weapon:GetNextSecondaryFire() <= CurTime() then
 		
 			if hitgroup == HITGROUP_RIGHTARM and Damage >= 50 then

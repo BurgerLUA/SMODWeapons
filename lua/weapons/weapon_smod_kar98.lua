@@ -81,8 +81,8 @@ function SWEP:SpecialFire()
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	self:WeaponAnimation(self:Clip1(),ACT_VM_SECONDARYATTACK)
 	
-	if IsFirstTimePredicted() then
+	--if IsFirstTimePredicted() then
 		self:NewSwing(90)
-	end
+	--end
 
 end

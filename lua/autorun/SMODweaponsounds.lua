@@ -1,3 +1,47 @@
+//SMOD A35 Grenade Launcher------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/a35/a35_deploy.wav"}
+SMODstbl["name"] = "Weapon_A35.Deploy"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/a35/a35_insert.wav"}
+SMODstbl["name"] = "Weapon_A35.InsertShell"
+
+sound.Add(SMODstbl)
+//SMOD Alyx Gun------------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/alyxgun/fire01.wav","weapons/alyxgun/fire02.wav"}
+SMODstbl["name"] = "Weapon_AlyxGun.Single"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/alyxgun/alyxgun_reload.wav"}
+SMODstbl["name"] = "Weapon_Alyxgun.Reload"
+
+sound.Add(SMODstbl)
 //SMOD CZ-52---------------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = 1
@@ -62,6 +106,39 @@ SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "85,115"
 SMODstbl["sound"] = {"weapons/colts/clip.wav"}
 SMODstbl["name"] = "Weapon_Pistol2.Reload"
+
+sound.Add(SMODstbl)
+//SMOD Flamethrower--------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "105"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "70,150"
+SMODstbl["sound"] = {"weapons/flamethrower/fire.wav"}
+SMODstbl["name"] = "Weapon_FlameThrower.fire"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 4
+SMODstbl["level"] = "105"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/flamethrower/fireloop.wav"}
+SMODstbl["name"] = "Weapon_FlameThrower.fireloop"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 4
+SMODstbl["level"] = "105"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/flamethrower/fireloop_idle.wav"}
+SMODstbl["name"] = "Weapon_FlameThrower.fireloop_idle"
 
 sound.Add(SMODstbl)
 //SMOD M1 Garand-----------------------------------------------------------
@@ -130,39 +207,6 @@ SMODstbl["sound"] = {"weapons/grease/tommy_draw_slideback.wav"}
 SMODstbl["name"] = "Weapon_Grease.Slideback"
 
 sound.Add(SMODstbl)
-//SMOD Karabiner98---------------------------------------------------------
-local SMODstbl = {}
-SMODstbl["channel"] = 3
-SMODstbl["level"] = "75"
-SMODstbl["volume"] = "0.9"
-SMODstbl["CompatibilityAttenuation"] = "1"
-SMODstbl["pitch"] = "98,102"
-SMODstbl["sound"] = {"weapons/kar98/boltback.wav"}
-SMODstbl["name"] = "Weapon_Kar98.Boltback"
-
-sound.Add(SMODstbl)
-
-local SMODstbl = {}
-SMODstbl["channel"] = 3
-SMODstbl["level"] = "75"
-SMODstbl["volume"] = "0.9"
-SMODstbl["CompatibilityAttenuation"] = "1"
-SMODstbl["pitch"] = "98,102"
-SMODstbl["sound"] = {"weapons/kar98/boltforward.wav"}
-SMODstbl["name"] = "Weapon_Kar98.Boltforward"
-
-sound.Add(SMODstbl)
-
-local SMODstbl = {}
-SMODstbl["channel"] = 3
-SMODstbl["level"] = "75"
-SMODstbl["volume"] = "0.9"
-SMODstbl["CompatibilityAttenuation"] = "1"
-SMODstbl["pitch"] = "98,102"
-SMODstbl["sound"] = {"weapons/grease/tommy_reload_clipin.wav"}
-SMODstbl["name"] = "Weapon_Kar98.Clipin"
-
-sound.Add(SMODstbl)
 //SMOD Katana--------------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = 1
@@ -216,6 +260,39 @@ SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "95,105"
 SMODstbl["sound"] = {"weapons/sword/sword_stab.wav"}
 SMODstbl["name"] = "Weapon_SMODSword.Stab"
+
+sound.Add(SMODstbl)
+//SMOD Karabiner98---------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/kar98/boltback.wav"}
+SMODstbl["name"] = "Weapon_Kar98.Boltback"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/kar98/boltforward.wav"}
+SMODstbl["name"] = "Weapon_Kar98.Boltforward"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/grease/tommy_reload_clipin.wav"}
+SMODstbl["name"] = "Weapon_Kar98.Clipin"
 
 sound.Add(SMODstbl)
 //SMOD M4A1----------------------------------------------------------------
@@ -361,6 +438,17 @@ SMODstbl["sound"] = {"weapons/m60/m60_close.wav"}
 SMODstbl["name"] = "Weapon_M60.close"
 
 sound.Add(SMODstbl)
+//SMOD MP40----------------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/mp40/mp40_shoot.wav"}
+SMODstbl["name"] = "Weapon_SMODMP40.Single"
+
+sound.Add(SMODstbl)
 //SMOD OICW----------------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = 1
@@ -436,6 +524,50 @@ SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "95,105"
 SMODstbl["sound"] = {"weapons/pulsemg/clipin.wav"}
 SMODstbl["name"] = "Weapon_PulseMG.Clipin"
+
+sound.Add(SMODstbl)
+//SMOD Sawed-off Shotgun---------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "0.8"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,101"
+SMODstbl["sound"] = {"weapons/sawedoff/sawedoff_fire.wav"}
+SMODstbl["name"] = "Weapon_Sawedoff.Single"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sawedoff/open.wav"}
+SMODstbl["name"] = "Weapon_Sawedoff.open"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sawedoff/load.wav"}
+SMODstbl["name"] = "Weapon_Sawedoff.load"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "95,105"
+SMODstbl["sound"] = {"weapons/sawedoff/close.wav"}
+SMODstbl["name"] = "Weapon_Sawedoff.close"
 
 sound.Add(SMODstbl)
 //SMOD Soybeans (Mamehand)-------------------------------------------------

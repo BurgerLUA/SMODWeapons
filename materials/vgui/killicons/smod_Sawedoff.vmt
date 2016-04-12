@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/killicons/smod_Sawedoff"
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}
