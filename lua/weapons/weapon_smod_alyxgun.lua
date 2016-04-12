@@ -28,11 +28,11 @@ SWEP.Primary.Sound			= Sound("Weapon_AlyxGun.Single")
 SWEP.Primary.Cone			= 0.0035
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.SpareClip		= 30*3
-SWEP.Primary.Delay			= 1/(900/60)
+SWEP.Primary.Delay			= 1/(800/60)
 SWEP.Primary.Ammo			= "css_57mm"
 SWEP.Primary.Automatic 		= true
 
-SWEP.RecoilMul				= 1.1
+SWEP.RecoilMul				= 1.25
 SWEP.SideRecoilMul			= 0.75
 SWEP.VelConeMul				= 0.5
 SWEP.HeatMul				= 1

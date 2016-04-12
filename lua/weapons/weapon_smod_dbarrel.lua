@@ -22,10 +22,10 @@ SWEP.WorldModel				= "models/weapons/w_sawedoff.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "ar2"
 
-SWEP.Primary.Damage			= 15
+SWEP.Primary.Damage			= 200/12
 SWEP.Primary.NumShots		= 12
 SWEP.Primary.Sound			= Sound("Weapon_Sawedoff.Single")
-SWEP.Primary.Cone			= 0.15
+SWEP.Primary.Cone			= 0.02
 SWEP.Primary.ClipSize		= 2
 SWEP.Primary.SpareClip		= 32
 SWEP.Primary.Delay			= 0.1
