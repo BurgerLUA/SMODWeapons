@@ -70,8 +70,13 @@ SWEP.Object					= "grenade_ar2"
 
 SWEP.AddFOV					= 10
 
+SWEP.HasHL2Pump				= true
+
+SWEP.PumpSound				= Sound("weapons/shotgun/shotgun_cock.wav")
+
 function SWEP:PrimaryAttack()
-	
+
+
 	if not self:CanPrimaryAttack() then	return end
 	if not self:CanShoot() then return end
 	self:TakePrimaryAmmo(1)

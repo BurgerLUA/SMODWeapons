@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/W_Alyx_Gun.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "revolver"
 
-SWEP.Primary.Damage			= 20
+SWEP.Primary.Damage			= 25
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_AlyxGun.Single")
 SWEP.Primary.Cone			= 0.0035
@@ -32,10 +32,10 @@ SWEP.Primary.Delay			= 1/(800/60)
 SWEP.Primary.Ammo			= "css_57mm"
 SWEP.Primary.Automatic 		= true
 
-SWEP.RecoilMul				= 1.25
+SWEP.RecoilMul				= 1.5
 SWEP.SideRecoilMul			= 0.75
 SWEP.VelConeMul				= 0.5
-SWEP.HeatMul				= 1
+SWEP.HeatMul				= 1.5
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 0.5

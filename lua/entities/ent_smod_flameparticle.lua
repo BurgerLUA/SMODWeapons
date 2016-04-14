@@ -92,6 +92,7 @@ function ENT:PhysicsCollide(colData, PhysObj)
 	
 	if MyPhys:IsMotionEnabled() then
 		MyPhys:EnableMotion(false)
+		self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 	end
 
 end

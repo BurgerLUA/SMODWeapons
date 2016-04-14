@@ -42,6 +42,28 @@ SMODstbl["sound"] = {"weapons/alyxgun/alyxgun_reload.wav"}
 SMODstbl["name"] = "Weapon_Alyxgun.Reload"
 
 sound.Add(SMODstbl)
+//SMOD Annabelle-----------------------------------------------------------
+local SMODstbl = {}
+SMODstbl["channel"] = 1
+SMODstbl["level"] = "140"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "100"
+SMODstbl["sound"] = {"weapons/annabelle/annabelle_single1.wav","weapons/annabelle/annabelle_single2.wav","weapons/annabelle/annabelle_single3.wav"}
+SMODstbl["name"] = "Weapon_SMODAnnabelle.Single"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "1.0"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "105"
+SMODstbl["sound"] = {"weapons/annabelle/annabelle_cock.wav"}
+SMODstbl["name"] = "Weapon_Annabelle.Cock"
+
+sound.Add(SMODstbl)
 //SMOD CZ-52---------------------------------------------------------------
 local SMODstbl = {}
 SMODstbl["channel"] = 1
