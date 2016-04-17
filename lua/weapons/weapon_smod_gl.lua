@@ -33,9 +33,9 @@ SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/ar2/npc_ar2_altfire.wav")
 SWEP.Primary.Cone			= 0.25
 SWEP.Primary.ClipSize		= 6
-SWEP.Primary.SpareClip		= 0
+SWEP.Primary.SpareClip		= 6
 SWEP.Primary.Delay			= 0.75
-SWEP.Primary.Ammo			= "pistol"
+SWEP.Primary.Ammo			= "ex_launcher"
 SWEP.Primary.Automatic 		= false
 
 SWEP.RecoilMul 				= 1
