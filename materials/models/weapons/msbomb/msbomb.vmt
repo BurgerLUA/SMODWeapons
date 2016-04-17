@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\msbomb/msbomb"
+	"$selfillum" "1"
+	"$bumpmap" "models\weapons\msbomb\msbomb_b"
+	"$envmap" "env_cubemap"
+	"$envmapsaturation" ".5"
+	"$envmapcontrast" "1"
+	"$normalmapalphaenvmapmask" "1"
+}

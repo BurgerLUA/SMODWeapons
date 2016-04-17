@@ -23,13 +23,13 @@ SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "revolver"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 40
+SWEP.Primary.Damage			= 35
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_CZ52.Single")
-SWEP.Primary.Cone			= 0.0025
+SWEP.Primary.Cone			= 0.005
 SWEP.Primary.ClipSize		= 8
 SWEP.Primary.SpareClip		= 8*4
-SWEP.Primary.Delay			= 1/10
+SWEP.Primary.Delay			= 0.15
 SWEP.Primary.Ammo			= "css_45acp"
 SWEP.Primary.Automatic 		= false
 
@@ -56,7 +56,7 @@ SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= true
 SWEP.IronSightTime			= 0.125
-SWEP.IronSightsPos 			= Vector(-3, 0, 2)
+SWEP.IronSightsPos 			= Vector(-6, 0, 2)
 SWEP.IronSightsAng 			= Vector(0, 0, 0)
 
 SWEP.DamageFalloff			= 1000
