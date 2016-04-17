@@ -467,7 +467,7 @@ SMODstbl["level"] = "75"
 SMODstbl["volume"] = "1.0"
 SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "90,115"
-SMODstbl["sound"] = {"weapons/mp40/smodmp40_shoot.wav"}
+SMODstbl["sound"] = {"weapons/mp40/mp40_shoot.wav"}
 SMODstbl["name"] = "Weapon_SMODMP40.Single"
 
 sound.Add(SMODstbl)
@@ -478,7 +478,7 @@ SMODstbl["level"] = "140"
 SMODstbl["volume"] = "1.0"
 SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "100"
-SMODstbl["sound"] = {"weapons/mp40/smodmp40_shoot.wav"}
+SMODstbl["sound"] = {"weapons/mp40/mp40_shoot.wav"}
 SMODstbl["name"] = "Weapon_SMODMP40.Single"
 
 sound.Add(SMODstbl)
