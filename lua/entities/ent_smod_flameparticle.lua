@@ -54,13 +54,22 @@ function ENT:Think()
 		for k,v in pairs(Players) do
 			if v:GetPos():Distance(self:GetPos()) <= 100 - (CurTime() - self.SpawnTime) then
 				
-				local Damage = DamageInfo()
-				Damage:SetDamage(5 - 5*( (CurTime() - self.SpawnTime)/60) )
-				Damage:SetAttacker(self.Owner)
-				Damage:SetInflictor(self)
-				Damage:SetDamageType(DMG_BURN)
+				local DamageValue = 5 - 5*( (CurTime() - self.SpawnTime)/60)
 				
-				v:TakeDamageInfo(Damage)
+				if v:Health() <= DamageValue then
+					local Damage = DamageInfo()
+					Damage:SetDamage(DamageValue)
+					Damage:SetAttacker(self.Owner)
+					Damage:SetInflictor(self)
+					Damage:SetDamageType(DMG_BURN)
+					
+					v:TakeDamageInfo(Damage)
+				else
+					if DamageValue >= 1 then
+						v:Ignite(DamageValue)
+					end
+					v:SetHealth(v:Health() - DamageValue)
+				end
 				
 			end
 		end

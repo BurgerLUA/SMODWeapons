@@ -1,5 +1,5 @@
 if CLIENT then
-	killicon.Add( "weapon_cs_smg",		"vgui/killicons/smod_flamethrower",	Color( 0, 128, 255, 255 ) )
+	killicon.Add( "ent_smod_flameparticle",		"vgui/killicons/smod_flamethrower",	Color( 0, 128, 255, 255 ) )
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/killicons/smod_flamethrower")
 end
 
