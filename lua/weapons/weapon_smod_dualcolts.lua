@@ -24,10 +24,10 @@ SWEP.ViewModelFlip 			= false
 SWEP.HoldType				= "duel"
 SWEP.UseHands				= false
 
-SWEP.Primary.Damage			= 50
+SWEP.Primary.Damage			= 45
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("weapons/colts/fire.wav")
-SWEP.Primary.Cone			= 0.02
+SWEP.Primary.Cone			= 0.01
 SWEP.Primary.ClipSize		= 14
 SWEP.Primary.SpareClip		= 14*4
 SWEP.Primary.Delay			= 1/10
@@ -36,7 +36,7 @@ SWEP.Primary.Automatic 		= false
 
 SWEP.EnableTracer			= false
 
-SWEP.RecoilMul				= 4
+SWEP.RecoilMul				= 1
 SWEP.SideRecoilMul			= 0.1
 SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 0.5
@@ -59,7 +59,7 @@ SWEP.HasIronSights 			= true
 SWEP.EnableIronCross		= true
 SWEP.HasGoodSights			= true
 SWEP.IronSightTime			= 0.125
-SWEP.IronSightsPos 			= Vector(0, 0, 2)
+SWEP.IronSightsPos 			= Vector(0.75, 5, 2)
 SWEP.IronSightsAng 			= Vector(0, 0, 0)
 
 SWEP.DamageFalloff			= 1000

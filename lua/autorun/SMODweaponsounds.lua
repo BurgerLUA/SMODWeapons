@@ -467,8 +467,8 @@ SMODstbl["level"] = "75"
 SMODstbl["volume"] = "1.0"
 SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "90,115"
-SMODstbl["sound"] = {"weapons/mp40/mp40_shoot.wav"}
-SMODstbl["name"] = "Weapon_SMODMP40.Single"
+SMODstbl["sound"] = {"weapons/msbomb/charge.wav"}
+SMODstbl["name"] = "Weapon_MSBomb.Charge"
 
 sound.Add(SMODstbl)
 //SMOD MP40----------------------------------------------------------------
