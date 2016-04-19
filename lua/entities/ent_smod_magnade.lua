@@ -92,7 +92,7 @@ function ENT:Think()
 			SafeRemoveEntity(self)	
 		elseif (CurTime() > self.Delay) and self.HasDetonated then
 			
-			local Objects = ents.FindInSphere(self:GetPos(),1000)
+			local Objects = ents.FindInSphere(self:GetPos(),500)
 
 			for k,v in pairs(Objects) do
 				if v ~= self and not v:IsWorld() and v:IsLineOfSightClear(self) then
@@ -100,13 +100,13 @@ function ENT:Think()
 					local Force = (self:GetPos() - v:GetPos())
 					Force:GetNormalized()
 					
-					local DistanceMul = ( (1000 - self:GetPos():Distance(v:GetPos()))/1000 ) ^ 2
+					local DistanceMul = ( (500 - self:GetPos():Distance(v:GetPos()))/500 ) ^ 1.5
 					
 					local TotalForce = Force*10*DistanceMul*1.5
 					
 					if v:IsPlayer() then
 					
-						--local ForceMul = 4
+						local ForceMul = 1
 					
 						if v:IsOnGround() then
 							ForceMul = 4
