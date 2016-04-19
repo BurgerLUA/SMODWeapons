@@ -54,7 +54,7 @@ function ENT:Think()
 		for k,v in pairs(Players) do
 			if v:GetPos():Distance(self:GetPos()) <= 100 - (CurTime() - self.SpawnTime) then
 				
-				local DamageValue = 5 - 5*( (CurTime() - self.SpawnTime)/60)
+				local DamageValue = 10 - 10*( (CurTime() - self.SpawnTime)/60)
 				
 				if v:Health() <= DamageValue then
 					local Damage = DamageInfo()
@@ -65,9 +65,6 @@ function ENT:Think()
 					
 					v:TakeDamageInfo(Damage)
 				else
-					if DamageValue >= 1 then
-						v:Ignite(DamageValue)
-					end
 					v:SetHealth(v:Health() - DamageValue)
 				end
 				
@@ -99,7 +96,15 @@ function ENT:PhysicsCollide(colData, PhysObj)
 
 	local MyPhys = self:GetPhysicsObject()
 	
-	if MyPhys:IsMotionEnabled() then
+	if colData.HitEntity and colData.HitEntity:IsPlayer() then
+		local Damage = DamageInfo()
+		Damage:SetDamage(25)
+		Damage:SetAttacker(self.Owner)
+		Damage:SetInflictor(self)
+		Damage:SetDamageType(DMG_BURN)
+		colData.HitEntity:TakeDamageInfo(Damage)
+		SafeRemoveEntity(self)
+	elseif MyPhys:IsMotionEnabled() then
 		MyPhys:EnableMotion(false)
 		self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 	end
