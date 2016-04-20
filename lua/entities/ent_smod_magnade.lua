@@ -105,7 +105,7 @@ function ENT:Think()
 					local TotalForce = Force*10*DistanceMul*1.5
 					
 					if v:IsPlayer() then
-					
+
 						local ForceMul = 1
 					
 						if v:IsOnGround() then
@@ -171,5 +171,6 @@ function ENT:Draw()
 
 	end
 end
+
 
 
