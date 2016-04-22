@@ -130,7 +130,7 @@ function SWEP:ShootBean(ShootPos,ShootAng)
 	local ent = ents.Create("ent_smod_beans")
 	ent:SetPos(ShootPos)
 	ent:SetAngles(ShootAng)
-	ent:SetOwner(self.Owner)
+	ent.FakeOwner = self.Owner
 	ent:Spawn()
 	
 	local phys = ent:GetPhysicsObject();

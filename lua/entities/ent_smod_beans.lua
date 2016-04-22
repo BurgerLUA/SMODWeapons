@@ -28,7 +28,7 @@ function ENT:PhysicsCollide( data, collider )
 	local Speed = data.Speed
 	
 	if Victim:IsPlayer() or Victim:IsNPC() then
-		Victim:TakeDamage( 10, self:GetOwner(), self )
+		Victim:TakeDamage( 10, self.FakeOwner, self )
 		SafeRemoveEntity(self)	
 	elseif Speed > 30 then
 		self:EmitSound("weapons/mamehand/soy.wav")
