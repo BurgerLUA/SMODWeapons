@@ -22,7 +22,7 @@ SWEP.WorldModel				= ""
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "fist"
 
-SWEP.Primary.Damage			= 40
+SWEP.Primary.Damage			= 30
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= -1
 SWEP.Primary.SpareClip		= -1
@@ -30,7 +30,7 @@ SWEP.Primary.Delay			= 1/(180/60)
 SWEP.Primary.Ammo			= "none"
 SWEP.Primary.Automatic 		= true 
 
-SWEP.Secondary.Damage		= 80
+SWEP.Secondary.Damage		= 60
 SWEP.Secondary.NumShots		= 1
 SWEP.Secondary.ClipSize		= -1
 SWEP.Secondary.SpareClip	= -1
