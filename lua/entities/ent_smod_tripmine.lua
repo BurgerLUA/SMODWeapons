@@ -198,7 +198,7 @@ function ENT:Detonate(pos)
 		effectdata:SetOrigin( pos )
 		effectdata:SetScale( 1 )
 	util.Effect( "Explosion", effectdata )	
-	util.BlastDamage(self, self.FakeOwner, pos, 250, 250)
+	util.BlastDamage(self, self.FakeOwner, pos, self.Range, 75)
 	
 	self.Pos1 = self.HitP + self.HitN
 	self.Pos2 = self.HitP - self.HitN
