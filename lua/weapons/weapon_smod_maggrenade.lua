@@ -1,5 +1,6 @@
 if CLIENT then
-	killicon.AddFont( "weapon_smod_maggrenade", "csd", "O", Color( 255, 80, 0, 255 ) ); killicon.AddFont( "ent_smod_magnade", "csd", "O", Color( 255, 80, 0, 255 ) )
+	killicon.Add( "weapon_smod_maggrenade", "vgui/killicons/smod_gravitygrenade", Color( 255, 255, 255, 255 ) )
+	killicon.Add( "ent_smod_magnade", "vgui/killicons/smod_gravitygrenade", Color( 255, 255, 255, 255 ) )
 	SWEP.WepSelectIcon 		= surface.GetTextureID("vgui/gfx/vgui/hegrenade")
 end
 
