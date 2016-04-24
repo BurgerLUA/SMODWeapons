@@ -64,4 +64,4 @@ SWEP.AddFOV					= 20
 
 SWEP.DamageFalloff			= 250
 
-SWEP.PenetrationLossScale	= 0.5
+SWEP.PenetrationLossScale	= 0.25
