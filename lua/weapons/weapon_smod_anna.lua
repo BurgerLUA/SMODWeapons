@@ -30,7 +30,7 @@ if CLIENT then
 	language.Add("ex_4440_ammo",".44-40")
 end
 
-SWEP.Primary.Damage			= 90
+SWEP.Primary.Damage			= 95
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_SMODAnnabelle.Single")
 SWEP.Primary.Cone			= 0
@@ -44,9 +44,9 @@ SWEP.Primary.Automatic 		= false
 
 SWEP.RecoilMul				= 0.3
 SWEP.SideRecoilMul			= 0.5
-SWEP.VelConeMul				= 1
-SWEP.HeatMul				= 8
-SWEP.CoolMul				= 1.9
+SWEP.VelConeMul				= 0.75
+SWEP.HeatMul				= 1
+SWEP.CoolMul				= 2.25
 
 SWEP.HasScope 				= false
 SWEP.ZoomAmount 			= 2

@@ -32,7 +32,7 @@ SWEP.Primary.Damage			= 50
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.SpareClip		= 0
-SWEP.Primary.Delay			= 0.5
+SWEP.Primary.Delay			= 0.75
 SWEP.Primary.Ammo			= "smod_weeb"
 SWEP.Primary.Automatic 		= true 
 
@@ -71,22 +71,47 @@ SWEP.DamageFalloff			= 1000
 SWEP.EnableBlocking			= true
 
 function SWEP:PrimaryAttack()
+
 	if self:IsUsing() then return end
 	if self:GetNextPrimaryFire() > CurTime() then return end
 	if self.Owner:KeyDown(IN_ATTACK2) then return end
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
-	self:SendWeaponAnim(ACT_VM_HITCENTER)
-	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
-	self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
-	if self:NewSwing(self.Primary.Damage*0.5 + (self.Primary.Damage*0.5*self:Clip1()*0.01) ) then
-		self:AddDurability(-math.random(1,3))
+	
+	if not self:GetIsLeftFire() then
+		self:SendSequence("hitcenter3")
+		--self:SendSequence("misscenter1")
+		self:SetIsLeftFire(true)
+		self:SetNextPrimaryFire(CurTime() + self.Primary.Delay*0.5)
+		self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
+	else
+		self:SendSequence("hitcenter2")
+		--self:SendSequence("misscenter2")
+		self:SetIsLeftFire(false)
+		self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
+		self:SetNextSecondaryFire(CurTime() + self.Primary.Delay)
+	end
+
+	if self:NewSwing(self.Primary.Damage*0.75 + (self.Primary.Damage*0.25*self:Clip1()*0.01) ) then
+		self:AddDurability(-1)
 	end
 	
 	--PrintTable(self.Owner:GetSequenceList())
 	
 end
 
+function SWEP:Reload()
+	--PrintTable(GetActivities(self))
+	--PrintTable(self:GetSequenceList())
+end
+
+
 function SWEP:SpareThink()
+
+	if self:GetNextPrimaryFire() + self.Primary.Delay <= CurTime() then
+		if not self:GetIsLeftFire() then
+			self:SetIsLeftFire(false)
+		end
+	end
 
 	if self.Owner:KeyDown(IN_ATTACK2) then
 		self:SetNextPrimaryFire(CurTime() + self.IronSightTime*2)
@@ -127,10 +152,6 @@ function SWEP:SecondaryAttack()
 		self:AddDurability(-math.random(5,8))
 	end
 	--]]
-end
-
-function SWEP:Reload()
-
 end
 
 function SWEP:AddDurability(amount)

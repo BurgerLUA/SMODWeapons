@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/W_Alyx_Gun.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "revolver"
 
-SWEP.Primary.Damage			= 25
+SWEP.Primary.Damage			= 20
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_AlyxGun.Single")
 SWEP.Primary.Cone			= 0.0035

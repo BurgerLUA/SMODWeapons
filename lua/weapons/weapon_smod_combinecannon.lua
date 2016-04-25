@@ -22,7 +22,7 @@ SWEP.WorldModel				= "models/weapons/w_pulsemg.mdl"
 SWEP.VModelFlip 			= false
 SWEP.HoldType				= "smg"
 
-SWEP.Primary.Damage			= 20
+SWEP.Primary.Damage			= 25
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Sound			= Sound("Weapon_PulseMG.Single")
 SWEP.Primary.Cone			= 0.005
@@ -32,7 +32,7 @@ SWEP.Primary.Delay			= 1/(800/60)
 SWEP.Primary.Ammo			= "ar2"
 SWEP.Primary.Automatic 		= true
 
-SWEP.RecoilMul				= 1
+SWEP.RecoilMul				= 0.75
 SWEP.SideRecoilMul			= 1
 SWEP.VelConeMul				= 2
 SWEP.HeatMul				= 0.25

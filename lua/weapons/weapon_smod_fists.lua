@@ -79,19 +79,13 @@ function SWEP:PrimaryAttack()
 	
 end
 
-function SWEP:SendSequence(anim)
-	local vm = self.Owner:GetViewModel()
-	vm:SendViewModelMatchingSequence( vm:LookupSequence( anim ) )
-end
-
 function SWEP:SecondaryAttack()
 
 	if self:IsUsing() then return end
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	
-	local vm = self.Owner:GetViewModel()
-	vm:SendViewModelMatchingSequence( vm:LookupSequence( "fists_uppercut" ) )
-
+	self:SendSequence("fists_uppercut")
+	
 	if self:NewSwing(self.Primary.Damage * 2 ) then
 		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay)
 		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
