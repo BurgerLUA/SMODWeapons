@@ -23,6 +23,7 @@ SWEP.VModelFlip 			= false
 SWEP.HoldType				= "fist"
 
 SWEP.Primary.Damage			= 30
+SWEP.Primary.Cone			= 1
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.ClipSize		= -1
 SWEP.Primary.SpareClip		= -1
