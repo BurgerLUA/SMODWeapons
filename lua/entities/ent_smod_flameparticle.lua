@@ -71,7 +71,7 @@ function ENT:Think()
 			end
 		end
 		
-		
+		--[[
 		if self.ParticleCount < 20 and math.random(1,10) == 1 then
 			local ent = ents.Create("ent_smod_smokeparticle")
 			ent:SetPos(self:GetPos())
@@ -82,7 +82,7 @@ function ENT:Think()
 			ent:GetPhysicsObject():SetVelocity(Vector(math.Rand(-5,5),math.Rand(-5,5),math.Rand(0,25)))
 			self.ParticleCount = self.ParticleCount + 1
 		end
-		
+		--]]
 		
 	end
 	

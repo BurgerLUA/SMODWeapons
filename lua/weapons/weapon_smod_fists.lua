@@ -31,7 +31,7 @@ SWEP.Primary.Delay			= 1/(180/60)
 SWEP.Primary.Ammo			= "none"
 SWEP.Primary.Automatic 		= true 
 
-SWEP.Secondary.Damage		= 60
+SWEP.Secondary.Damage		= 50
 SWEP.Secondary.NumShots		= 1
 SWEP.Secondary.ClipSize		= -1
 SWEP.Secondary.SpareClip	= -1
@@ -88,11 +88,11 @@ function SWEP:SecondaryAttack()
 	self:SendSequence("fists_uppercut")
 	
 	if self:NewSwing(self.Primary.Damage * 2 ) then
-		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay)
-		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
+		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay*0.75)
+		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay*0.75)
 	else
-		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay*2 )
-		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay*2 )
+		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay )
+		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay )
 	end
 	
 end
