@@ -132,26 +132,8 @@ function SWEP:SpareThink()
 
 end
 
-
 function SWEP:SecondaryAttack()
-	--[[
-	local Sequence = self.Owner:LookupSequence("fist_block")
-	print(Sequence)
-	self.Owner:ResetSequence( Sequence )
-	--]]
-	--print(self.Owner:GetSequence())
-	
-	--[[
-	if self:IsUsing() then return end
-	if self:GetNextSecondaryFire() > CurTime() then return end
-	self.Owner:SetAnimation(PLAYER_ATTACK1)
-	self:SendWeaponAnim(ACT_VM_HITKILL)
-	self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay)
-	self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
-	if self:Swing(self.Secondary.Damage) then
-		self:AddDurability(-math.random(5,8))
-	end
-	--]]
+
 end
 
 function SWEP:AddDurability(amount)
