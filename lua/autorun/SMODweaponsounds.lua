@@ -642,6 +642,29 @@ SMODstbl["channel"] = 3
 SMODstbl["level"] = "75"
 SMODstbl["volume"] = "0.9"
 SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/svd/svd_magout.wav"}
+SMODstbl["name"] = "Weapon_SVD.Magout"
+
+sound.Add(SMODstbl)
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
+SMODstbl["pitch"] = "98,102"
+SMODstbl["sound"] = {"weapons/svd/svd_magin.wav"}
+SMODstbl["name"] = "Weapon_SVD.Magin"
+
+sound.Add(SMODstbl)
+
+
+local SMODstbl = {}
+SMODstbl["channel"] = 3
+SMODstbl["level"] = "75"
+SMODstbl["volume"] = "0.9"
+SMODstbl["CompatibilityAttenuation"] = "1"
 SMODstbl["pitch"] = "98,105"
 SMODstbl["sound"] = {"weapons/oicw/oicw_reload.wav"}
 SMODstbl["name"] = "Weapon_SVD.Lens"
